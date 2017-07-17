@@ -21,7 +21,7 @@
           <ArrayEditor title="学习经历" v-bind:items="resume.studyHistory" v-bind:labels="['学校','时间','学位']"></ArrayEditor>
         </li>
         <li v-if="currentTab === 3">
-          <ArrayEditor title="项目经理" v-bind:items="resume.projects" v-bind:labels="['项目名称','工作内容']"></ArrayEditor>
+          <ArrayEditor title="项目经历" v-bind:items="resume.projects" v-bind:labels="['项目名称','工作内容']"></ArrayEditor>
         </li>
         <li v-if="currentTab === 4">
           <ArrayEditor title="获奖情况" v-bind:items="resume.awards" v-bind:labels="['奖励详情']"></ArrayEditor>

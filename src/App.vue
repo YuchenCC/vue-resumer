@@ -3,7 +3,7 @@
     <topbar></topbar>
     <div id="main">
       <editor v-bind:resume="resume"></editor>
-      <preview></preview>
+      <preview v-bind:resume="resume"></preview>
     </div>
   </div>
 </template>
