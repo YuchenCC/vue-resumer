@@ -4,17 +4,17 @@
     <br>
     <h2>基本信息</h2>
     <br>
-    {{resume.profile.name || '请填写姓名'}}
+    {{resume.profile.name || '姓名'}}
     <br>
-    {{resume.profile.birth || ''}}
+    {{resume.profile.birth || '填写出生日期' }}
     <br>
-    {{resume.profile.city || ''}}
+    {{resume.profile.city || '所在城市'}}
     <br>
-    {{resume.contacts.qq || ''}}
+    {{resume.contacts.qq || 'QQ'}}
     <br>
-    {{resume.contacts.wechat || ''}}
+    {{resume.contacts.wechat || '微信'}}
     <br>
-    {{resume.contacts.email || ''}}
+    {{resume.contacts.email || 'Email'}}
     <br>
     <h2>工作经历</h2>
     <ol>
@@ -28,7 +28,7 @@
     <ol>
       <li v-for="(key,index) in resume.studyHistory" v-bind:index="index">
         <div v-for ="work in works('studyHistory')">
-          <p>{{key[work]}}</p>
+          <p >{{key[work]}}</p>
         </div>
       </li>
     </ol>
@@ -64,7 +64,7 @@
     props:['resume'],
     data () {
       return {
-        msg: 'mine test'
+        record: 0
       }
     },
     methods: {
@@ -86,6 +86,9 @@
     margin-right: 16px;
     box-shadow: 0 0 3px rgba(0,0,0,.5);
     li{display:block}
+    *{
+      line-height: 1.5em;
+    }
   }
 
 </style>

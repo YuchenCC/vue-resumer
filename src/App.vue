@@ -56,7 +56,7 @@ export default {
     display:flex;
     flex-direction:column;
     #main{
-      flex-grow: 1;
+      height: 100%;
       background: #ddd;
       padding: 16px 0;
       display: flex;

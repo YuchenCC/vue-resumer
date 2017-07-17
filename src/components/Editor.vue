@@ -71,7 +71,6 @@
     margin: 0 16px;
     box-shadow: 0 0 3px rgba(0,0,0,.5);
     display: flex;
-    overflow:hidden;
     > nav{
       background: black;
       height:100%;
@@ -101,12 +100,16 @@
     }
     > .content{
       flex-grow:1;
+      overflow:auto;
       ol{
         li{
-            background: white;
-            width: 70%;
-            margin: 0 auto;
-            margin-top: 48px;
+          overflow: auto;
+          background: white;
+          width: 100%;
+          margin: 0 auto;
+          margin-top: 48px;
+          margin-right: 16px;
+          padding: 0 60px;
 
         }
       }
