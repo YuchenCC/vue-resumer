@@ -22,10 +22,22 @@ export default {
 </script>
 
 <style lang="scss">
-  *{margin:0;
+  *{
+    margin:0;
     padding:0;
-    box-sizing:border-box
+    box-sizing:border-box;
+    ol,ul{
+      list-style: none;
+      li{
+        list-style: none;
+      }
+    }
+    a{
+      color: inherit;
+      text-decoration: none;
+    }
   };
+
   html, body, #app{ height: 100%; overflow: hidden; }
   #app{
     display:flex;
