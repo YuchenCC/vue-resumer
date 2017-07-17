@@ -2,7 +2,7 @@
   <div id="app">
     <topbar></topbar>
     <div id="main">
-      <editor></editor>
+      <editor v-bind:resume="resume"></editor>
       <preview></preview>
     </div>
   </div>
@@ -17,6 +17,19 @@ export default {
   name: 'app',
   components: {
     Topbar,Editor,Preview
+  },
+  data() {
+    return{
+      previewMode: false,
+      resume: {
+        profile: { name: '', city: '', birth: '' },
+        workHistory: [ {company: '', content: ''}, ],
+        studyHistory: [ {school: '', duration: '', degree: ''} ],
+        projects: [ {name: '', content: '' } ],
+        awards: [ {name: ''} ],
+        contacts: { qq: '', wechat: '', phone: '', email: '' }
+      }
+    }
   }
 }
 </script>
