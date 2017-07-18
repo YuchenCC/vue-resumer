@@ -1,21 +1,23 @@
 # vue-resumer
 
-> A Vue.js project
+> Vue.js编写的在线简历编辑器
 
-## Build Setup
+github预览链接：https://yuchencc.github.io/vue-resumer/dist/
 
-``` bash
-# install dependencies
-npm install
+实现内容：
 
-# serve with hot reload at localhost:8080
-npm run dev
+在线简历编辑，支持预览，Markdown语法
 
-# build for production with minification
-npm run build
+技术栈：
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+vue.js , elementUI ，MVVM ，scss ，es6 ，vue-cli ..
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+项目难点攻克：
+
+vue.js框架原理，vue自制组件/数据传递，elementUI的使用
+
+项目遗憾：
+
+- 未连接后台数据库，无法实现登陆注册功能，以及保存简历至数据库功能。
+
+
