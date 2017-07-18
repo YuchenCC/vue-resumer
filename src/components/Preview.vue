@@ -17,35 +17,46 @@
     <p>{{resume.contacts.email || 'Email'}}</p>
     <br>
     <h2>工作经历</h2>
+    <br>
     <ol>
       <li v-for="(key,index) in resume.workHistory" v-bind:index="index">
         <div v-for ="work in works('workHistory')">
           <p>{{key[work]}}</p>
         </div>
+        <br>
       </li>
     </ol>
+    <br>
     <h2>学习经历</h2>
+    <br>
     <ol>
       <li v-for="(key,index) in resume.studyHistory" v-bind:index="index">
         <div v-for ="work in works('studyHistory')">
           <p >{{key[work]}}</p>
         </div>
+        <br>
       </li>
     </ol>
+    <br>
     <h2>项目经历</h2>
+    <br>
     <ol>
       <li v-for="(key,index) in resume.projects" v-bind:index="index">
         <div v-for ="work in works('projects')">
           <p>{{key[work]}}</p>
         </div>
+        <br>
       </li>
     </ol>
+    <br>
     <h2>获奖情况</h2>
+    <br>
     <ol>
       <li v-for="(key,index) in resume.awards" v-bind:index="index">
         <div v-for ="work in works('awards')">
           <p>{{key[work]}}</p>
         </div>
+        <br>
       </li>
     </ol>
   </div>

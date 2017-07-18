@@ -64,6 +64,7 @@
   }
 </script>
 <style lang="scss">
+
   .editor{
     background: white;
     border-radius: 4px;
@@ -71,6 +72,7 @@
     margin: 0 16px;
     box-shadow: 0 0 3px rgba(0,0,0,.5);
     display: flex;
+    min-width: 350px;
     > nav{
       background: black;
       height:100%;
@@ -102,18 +104,34 @@
       flex-grow:1;
       overflow:auto;
       ol{
+        text-align: center;
         li{
+          display:inline-block;
           overflow: auto;
           background: white;
-          width: 100%;
+          width: 90%;
           margin: 0 auto;
           margin-top: 48px;
-          margin-right: 16px;
-          padding: 0 60px;
-
         }
       }
 
+    }
+  }
+  @media (max-width: 1400px){
+    .content{
+      ol{
+        li{
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+  @media (max-width: 750px){
+    .editor{
+      width:100%;
+      margin: 0 auto;
+      flex-grow:1;
+      height:100%;
     }
   }
 </style>

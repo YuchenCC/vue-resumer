@@ -28,9 +28,14 @@
         return this.items.length - 1
       }
     },
+    data() {
+      return {
+        removeSwitch: true,
+      }
+    },
     methods: {
       addWorkHistory(){
-      	console.log(this.items)
+      	//console.log(this.items)
         const empty = {}
         this.keys.map((key)=>{
           empty[key] = ''
@@ -38,6 +43,11 @@
         this.items.push(empty)
       },
       removeWorkHistory(index){
+      	if(index === 0){
+      		 console.log(this.removeSwitch)
+           return this.removeSwitch = false;
+        }
+        console.log(this.removeSwitch)
         this.items.splice(index, 1)
       }
     }
@@ -52,7 +62,7 @@
     position: absolute;
     top:0;
     right: 0;
-    transform: translateX(100%);
+    transform: scale(.75);
     i{
       border:1px solid #ddd;
       color :#ddd;

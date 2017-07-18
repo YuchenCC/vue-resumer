@@ -66,11 +66,19 @@ export default {
       padding: 16px 0;
       display: flex;
     }
+    @media (max-width: 750px){
+      #main{
+        flex-direction:column;
+      }
+      .view{
+        display:none;
+      }
+    }
   }
   .viewButton{
     position: absolute;
     bottom: 24px;
-    right: 24px;
+    right: 40px;
   }
   .pre{
     width: 60%;
@@ -80,14 +88,27 @@ export default {
     background: #F9FAFC;
     border-radius: 4px;
     overflow: auto;
+    min-width: 600px;
   }
+
   .view{
     overflow: auto;
-    padding: 16px 32px;
+    padding: 32px 32px;
     flex-grow: 1;
     background: white;
     border-radius: 4px;
     margin-right: 16px;
     box-shadow: 0 0 3px rgba(0,0,0,.5);
+  }
+  @media (max-width: 750px){
+    .pre {
+      width: 96%;
+      border-radius: 0;
+      margin: 8px auto;
+      margin-bottom:0;
+    }
+    .view{
+      margin-right: 16px;
+    }
   }
 </style>
