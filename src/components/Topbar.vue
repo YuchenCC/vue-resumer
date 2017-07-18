@@ -30,14 +30,14 @@
     position:relative;
     z-index:1;
     height: 84px;
+    align-items: center;
+    padding: 16px;
     h2{
-      font-size : 32px;
+      font-size : 24px;
       font-weight: normal;
-      padding: 32px 32px;
       line-height: 32px;
     }
     .button{
-      padding: 32px 32px;
       button{
         padding: 8px 16px;
         text-align: center;
