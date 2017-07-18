@@ -75,7 +75,6 @@
     min-width: 350px;
     > nav{
       background: black;
-      height:100%;
       width: 30%;
       max-width: 80px;
       li{
