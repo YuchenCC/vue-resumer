@@ -4,17 +4,17 @@
     <br>
     <h2>基本信息</h2>
     <br>
-    {{resume.profile.name || '姓名'}}
+    <p>{{resume.profile.name || '姓名'}}</p>
     <br>
-    {{resume.profile.birth || '填写出生日期' }}
+    <p>{{resume.profile.birth || '填写出生日期' }}</p>
     <br>
-    {{resume.profile.city || '所在城市'}}
+    <p>{{resume.profile.city || '所在城市'}}</p>
     <br>
-    {{resume.contacts.qq || 'QQ'}}
+    <p>{{resume.contacts.qq || 'QQ'}}</p>
     <br>
-    {{resume.contacts.wechat || '微信'}}
+    <p>{{resume.contacts.wechat || '微信'}}</p>
     <br>
-    {{resume.contacts.email || 'Email'}}
+    <p>{{resume.contacts.email || 'Email'}}</p>
     <br>
     <h2>工作经历</h2>
     <ol>
@@ -70,21 +70,19 @@
     methods: {
       works(points){
         let work = this.resume[points]
-        console.log(work)
+        //console.log(work)
         return Object.keys(work[0])
       }
     },
+    create: {
+    	fn(){console.log('create')}
+
+    }
   }
 </script>
 <style lang="scss">
   .preview{
-    overflow: auto;
-    padding: 16px 32px;
-    flex-grow: 1;
-    background: white;
-    border-radius: 4px;
-    margin-right: 16px;
-    box-shadow: 0 0 3px rgba(0,0,0,.5);
+
     li{display:block}
     *{
       line-height: 1.5em;

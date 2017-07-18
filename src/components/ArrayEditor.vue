@@ -10,6 +10,7 @@
           <i class="el-icon-plus" v-on:click="addWorkHistory()"></i>
           <i class="el-icon-minus" v-on:click="removeWorkHistory(index)"></i>
         </div>
+        <p v-if="index !== workCount" class="fenggexian">--  &nbsp&nbsp&&&nbsp&nbsp  --</p>
       </div>
     </el-form>
   </div>
@@ -22,6 +23,9 @@
     computed: {
       keys(){
         return Object.keys(this.items[0])
+      },
+      workCount(){
+        return this.items.length - 1
       }
     },
     methods: {
@@ -55,6 +59,13 @@
       padding: 3px;
       box-sizing: content-box;
     }
+  }
+  .fenggexian{
+    margin: 16px auto;
+    text-align: center;
+  }
+  .el-form-item{
+    margin-bottom: 16px;
   }
 
 </style>

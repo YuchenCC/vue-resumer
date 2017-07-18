@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <topbar></topbar>
+    <topbar v-if="previewSwitch === true"></topbar>
     <div id="main">
-      <editor v-bind:resume="resume"></editor>
-      <preview v-bind:resume="resume"></preview>
+      <editor v-bind:resume="resume" v-if="previewSwitch === true"></editor>
+      <preview v-bind:resume="resume" v-bind:class="{pre : previewSwitch === false,view : previewSwitch === true}"></preview>
     </div>
+    <el-button class='viewButton'type="primary"  v-if="previewSwitch === true" v-on:click="previewSwitch = false">预览</el-button>
+    <el-button class='viewButton' v-if="previewSwitch === false" v-on:click="previewSwitch = true">取消预览</el-button>
   </div>
 </template>
 
@@ -20,6 +22,7 @@ export default {
   },
   data() {
     return{
+      previewSwitch:true,
       previewMode: false,
       resume: {
         profile: { name: '', city: '', birth: '' },
@@ -35,7 +38,9 @@ export default {
 </script>
 
 <style lang="scss">
+
   *{
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -62,5 +67,27 @@ export default {
       display: flex;
     }
   }
-
+  .viewButton{
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+  }
+  .pre{
+    width: 60%;
+    padding: 64px;
+    margin: 0 auto;
+    box-shadow: 0 0 3px rgba(0,0,0,.5);
+    background: #F9FAFC;
+    border-radius: 4px;
+    overflow: auto;
+  }
+  .view{
+    overflow: auto;
+    padding: 16px 32px;
+    flex-grow: 1;
+    background: white;
+    border-radius: 4px;
+    margin-right: 16px;
+    box-shadow: 0 0 3px rgba(0,0,0,.5);
+  }
 </style>
